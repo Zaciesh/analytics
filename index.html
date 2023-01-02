@@ -8,6 +8,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
 	<link href="css/magnific-popup.min.css" rel="stylesheet">
     <link href="css/tooplate-style.css" rel="stylesheet">
+<script>
+  // Initialize the agent at application startup.
+  // Some ad blockers or browsers will block Fingerprint Pro CDN URL.
+  // To fix this, please use the NPM package instead.
+  	const fpPromise = import('https://fpjscdn.net/v3/your-public-api-key')
+    	.then(FingerprintJS => FingerprintJS.load());
+  // Get the visitor identifier when you need it.
+	fpPromise
+    	.then(fp => fp.get())
+    	.then(result => console.log(result.visitorId));
+</script>
+	
 <!--
 
 Tooplate 2122 Nano Folio
@@ -30,6 +42,7 @@ https://www.tooplate.com/view/2122-nano-folio
 			</div>
 			<div class="tm-about-text">
 				<p class="tm-mb-40">Data Analyst | Expertise in Product Data & Data Quality</p>
+				<p class="tm-mb-0"><a href="https://www.linkedin.com/in/andrzejczyk-aleksandra/">"LinkedIn</p>
 			</div>
 		</section>
 
